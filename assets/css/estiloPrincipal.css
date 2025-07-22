@@ -23,9 +23,9 @@ body {
   background-size: cover;
   filter: blur(1px) brightness(0.9);
   overflow: hidden;
-  animation: gradienteOla 20s ease infinite;
   z-index: -1;
 }
+
 
 /* Movmiento de una Celula*/
 .celula {
@@ -144,27 +144,27 @@ body {
 }
 
 /* Estilos para la bienvenida */
-.welcome-container {
+.contenedor-bienvenida {
   text-align: center;
   opacity: 0;
-  animation: fadeIn 3s forwards;
+  animation: aparecer 3s forwards;
   z-index: 1; /* Asegura que el contenido de la bienvenida esté sobre el fondo */
 }
 
-.welcome-text {
+.texto-bienvenida {
   font-size: 3rem;
   color: #333;
   margin-bottom: 1rem;
-  animation: slideUp 2s ease-out forwards;
+  animation: moverArriba 2s ease-out forwards;
 }
 
-.subtitle {
+.subtitulo {
   font-size: 1.5rem;
   color: #777;
   margin-bottom: 2rem;
 }
 
-.btn {
+.boton {
   padding: 12px 30px;
   font-size: 1.2rem;
   background-color: #007BFF;
@@ -176,7 +176,7 @@ body {
   transition: all 0.3s;
 }
 
-.btn:hover {
+.boton:hover {
   background-color: #0056b3;
 }
 
@@ -187,23 +187,8 @@ body {
   }
 }
 
-/* Animación del fondo */
-
-@keyframes gradienteOla {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
 /* Animaciones de bienvenida */
-@keyframes fadeIn {
+@keyframes aparecer {
   from {
     opacity: 0;
   }
@@ -212,7 +197,7 @@ body {
   }
 }
 
-@keyframes slideUp {
+@keyframes moverArriba {
   from {
     transform: translateY(50px);
     opacity: 0;
