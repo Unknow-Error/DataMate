@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.welcome-container {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  animation: slideUp 2s ease-out forwards;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
