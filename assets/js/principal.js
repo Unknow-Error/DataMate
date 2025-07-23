@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const welcomeText = document.querySelector(".texto-bienvenida");
   setTimeout(() => {
     welcomeText.classList.add("show");
-  }, 1000);
+  }, 1500);
 });

@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia, sans-serif;
   background-color: #666FFF;
   margin: 0;
   height: 100vh;
@@ -30,10 +30,11 @@ body {
 /* Movmiento de una Celula*/
 .celula {
   position: absolute;
-  width: 20vmin;
-  height: 20vmin;
+  width: 15vmin;
+  height: 15vmin;
   border-radius: 50%;
   backface-visibility: hidden;
+  filter: blur(2px);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
   animation: moverCelula linear infinite;
   display: flex;
@@ -43,9 +44,10 @@ body {
 }
 
 .nucleo {
-  width: 8vmin;
-  height: 8vmin;
+  width: 4vmin;
+  height: 4vmin;
   border-radius: 50%;
+  filter: blur(1px);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.384);
 }
 
@@ -60,7 +62,7 @@ body {
   border: 2px solid #5b0c83d3; /* purple border */
 }
 
-/* Celulas Rosa oscuro - even */
+/* Celulas Rosa oscuro - par */
 .celula:nth-child(even) {
   border: 3px solid #C71585; /* medium violet red */
   background-color: hsla(320, 81%, 46%, 0.4);
@@ -146,28 +148,34 @@ body {
 /* Estilos para la bienvenida */
 .contenedor-bienvenida {
   text-align: center;
+  width: 75vmin;
+  height: 30vmin;
   opacity: 0;
   animation: aparecer 3s forwards;
+  background-color: #2a1e7736 ;
+  border: 5px solid #7472ffbb;
+  border-radius: 25px;
+  backdrop-filter: blur(2px); /* Para blurrear lo que esté al fondo */
   z-index: 1; /* Asegura que el contenido de la bienvenida esté sobre el fondo */
 }
 
 .texto-bienvenida {
   font-size: 3rem;
-  color: #333;
+  color: #e9d5d5;
   margin-bottom: 1rem;
   animation: moverArriba 2s ease-out forwards;
 }
 
 .subtitulo {
   font-size: 1.5rem;
-  color: #777;
+  color: #eec6c6;
   margin-bottom: 2rem;
 }
 
 .boton {
   padding: 12px 30px;
   font-size: 1.2rem;
-  background-color: #007BFF;
+  background-color: #04a079d3;
   color: white;
   border: none;
   border-radius: 5px;
@@ -177,7 +185,7 @@ body {
 }
 
 .boton:hover {
-  background-color: #0056b3;
+  background-color: #025a75;
 }
 
 /* Animacion de la celula */
