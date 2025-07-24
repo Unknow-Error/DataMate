@@ -34,6 +34,40 @@ footer {
   line-height: 20px;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #57219486;
+  animation: moverAbajo 2s ease-out forwards;
+  backdrop-filter: blur(1.5px);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Esto los pone en línea horizontal */
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(188, 250, 250);
+  font-weight: bold;
+  padding: 15px 35px;
+  display: block;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #3b86b8da;
+  border-radius: 10px;
+}
+
 /* Fondo animado */
 .fondo {
   position: fixed;
@@ -168,7 +202,7 @@ footer {
 }
 
 /* Estilos para la bienvenida */
-.contenedor-bienvenida {
+.proyectos {
   text-align: center;
   width: 75vmin;
   height: 30vmin;
@@ -179,22 +213,6 @@ footer {
   border-radius: 25px;
   backdrop-filter: blur(2px); /* Para blurrear lo que esté al fondo */
   z-index: 1; /* Asegura que el contenido de la bienvenida esté sobre el fondo */
-}
-
-.texto-bienvenida {
-  font-size: 3rem;
-  font-family: Georgia, sans-serif;
-  color: #e9d5d5;
-  margin-bottom: 1rem;
-  animation: moverArriba 2s ease-out forwards;
-}
-
-.subtitulo {
-  font-size: 1.5rem;
-  font-family: Georgia, sans-serif;
-  color: #eec6c6;
-  margin-bottom: 2rem;
-  animation: moverArriba 2s ease-out forwards;
 }
 
 .boton {
@@ -242,3 +260,13 @@ footer {
   }
 }
 
+@keyframes moverAbajo {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
